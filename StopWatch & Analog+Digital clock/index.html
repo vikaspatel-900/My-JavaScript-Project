@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="stopwatch" >
+        <button id="clock">
+            <div id="clock_inner" class="inner-class">
+                <p id="tittle">Timer</p>
+                <p id="timer">00:00:00</p>
+                <p id="time">00:00</p>
+            </div>
+
+            <div id="parent-analog-clock" class="parent-class">
+                <div id="anolog-clock" class="anolog-class">
+                    <div class="anolog-clock-line">
+                        <li id="line1" class="line"></li>
+                        <li id="line2" class="line"></li>
+                        <li id="line3" class="line"></li>
+                    </div>
+                    <span style="--i:1;"><b>1</b></span>
+                    <span style="--i:2;"><b>2</b></span>
+                    <span style="--i:3;"><b>3</b></span>
+                    <span style="--i:4;"><b>4</b></span>
+                    <span style="--i:5;"><b>5</b></span>
+                    <span style="--i:6;"><b>6</b></span>
+                    <span style="--i:7;"><b>7</b></span>
+                    <span style="--i:8;"><b>8</b></span>
+                    <span style="--i:9;"><b>9</b></span>
+                    <span style="--i:10;"><b>10</b></span>
+                    <span style="--i:11;"><b>11</b></span>
+                    <span style="--i:12;;"><b>12</b></span>
+                </div>
+            </div>
+        </button>
+
+        <div  id="all-btn" class="button">
+            <button class="btn" id="start">Start</button>
+            <button class="btn" id="restart">Restart</button>
+            <button class="btn" id="stop">Stop</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

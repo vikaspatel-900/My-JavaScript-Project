@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(1, 36, 41);
+}
+
+#stopwatch {
+  width: 500px;
+  height: 450px;
+  background-color: rgb(1, 36, 41);
+  border-radius: 20px;
+  box-shadow: 1px 2px 4px 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.39);
+  border-top: 1px solid rgba(255, 255, 255, 0.341);
+}
+
+#clock {
+  width: 250px;
+  height: 250px;
+  /* border: 1px solid rgb(8, 129, 169); */
+  background-color: rgb(1, 36, 41);
+  border-radius: 50%;
+  color: white;
+  box-shadow: 3px 3px 4px 2px black;
+  cursor: pointer;
+}
+
+/*******************************************************stopwatch-content*****************************************************/
+
+#clock_inner {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.inner-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.myclock {
+  display: none;
+}
+
+#time {
+  padding: 4px 6px;
+  box-shadow: 1px 1px 5px 1px black;
+  border-radius: 3px;
+  font-size: 20px;
+  color: chocolate;
+}
+
+#timer {
+  font-size: 30px;
+  color: aqua;
+}
+
+/* ************************************************************Anolog-clock****************************************************** */
+
+#parent-analog-clock {
+  width: 100%;
+  height: 100%;
+}
+
+.parent-class {
+  display: none;
+}
+
+#anolog-clock {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anolog-block {
+  display: block;
+}
+
+#anolog-clock::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  z-index: 4;
+}
+
+#anolog-clock span {
+  position: absolute;
+  transform: rotate(calc(30deg * var(--i)));
+  inset: 12px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+#anolog-clock span b {
+  transform: rotate(calc(-30deg * var(--i)));
+  display: inline-block;
+}
+
+.anolog-clock-line {
+  display: flex;
+  justify-content: center;
+  align-items: self-end;
+}
+
+.line {
+  position: absolute;
+  width: 5px;
+  height: 60px;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 0;
+}
+
+#line3 {
+  height: 75px;
+  width: 3px;
+  transform-origin: bottom;
+  z-index: 3;
+}
+
+#line2 {
+  transform-origin: bottom;
+  width: 4px;
+  height: 65px;
+  background-color: chocolate;
+  z-index: 2;
+}
+
+#line1 {
+  transform-origin: bottom;
+  width: 5px;
+  height: 50px;
+  z-index: 1;
+  background-color: black;
+}
+
+/**************************************************************button-section***********************************************/
+
+#all-btn {
+  column-gap: 20px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn-hidden {
+  visibility: hidden;
+}
+
+.btn {
+  width: 80px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#start {
+  background-color: rgb(5, 157, 48);
+}
+
+#start:hover {
+  background-color: blue;
+  box-shadow: 1px 1px 10px 2px white;
+}
+
+#stop {
+  background-color: rgb(223, 45, 10);
+}
+
+#stop:hover {
+  background-color: blue;
+  box-shadow: 1px 1px 10px 2px white;
+}
+
+#restart {
+  background-color: rgb(204, 104, 4);
+}
+
+#restart:hover {
+  background-color: blue;
+  box-shadow: 1px 1px 10px 2px white;
+}
+
+.btn2 {
+  background-color: blue;
+  box-shadow: 1px 1px 10px 2px white;
+}
+
+/********************************************************** @media **************************************************************** */
+
+@media only screen and (max-width: 850px) {
+  #stopwatch {
+    width: 400px;
+    height: 420px;
+  }
+}
+
+/********************************************************* width 600px***************************************************************/
+
+@media only screen and (max-width: 600px) {
+  #stopwatch {
+    width: 350px;
+    height: 400px;
+  }
+
+  #clock {
+    width: 220px;
+    height: 220px;
+  }
+
+  .btn {
+    width: 70px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  #line3 {
+    height: 65px;
+  }
+
+  #line2 {
+    height: 55px;
+  }
+}
+
+/**************************************************************************width 450px***********************************************************/
+
+@media only screen and (max-width: 450px) {
+  #stopwatch {
+    width: 280px;
+    height: 400px;
+  }
+
+  #clock {
+    width: 200px;
+    height: 200px;
+  }
+
+  .btn {
+    width: 60px;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 8px 4px;
+  }
+
+  #line3 {
+    height: 55px;
+  }
+
+  #line2 {
+    height: 47px;
+  }
+
+  #line1 {
+    height: 40px;
+  }
+
+  span b {
+    font-size: 16px;
+  }
+}
+
+/*****************************************************width 335 px****************************************************************************/
+
+@media only screen and (max-width: 335px) {
+  #stopwatch {
+    width: 240px;
+    height: 400px;
+  }
+
+  #clock {
+    width: 170px;
+    height: 170px;
+  }
+
+  .btn {
+    width: 80px;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 8px 4px;
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    row-gap: 20px;
+  }
+
+  #time {
+    padding: 4px 6px;
+    box-shadow: 1px 1px 5px 1px black;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+
+  #timer {
+    font-size: 20px;
+  }
+
+  #line3 {
+    height: 45px;
+  }
+
+  #line2 {
+    height: 37px;
+  }
+
+  #line1 {
+    height: 30px;
+  }
+
+  span b {
+    font-size: 14px;
+  }
+}
+
+/*************************************************************width 275 px *************************************************************/
+
+@media only screen and (max-width: 275px) {
+  #stopwatch {
+    width: 210px;
+    height: 400px;
+  }
+
+  #clock {
+    width: 160px;
+    height: 160px;
+  }
+}
