@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anolog & Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+DE+Grund:wght@100..400&family=Playwrite+MX:wght@100..400&family=Playwrite+US+Trad:wght@100..400&family=Playwrite+VN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="left-content">
+        <p class="left-line1">Amazing</p>
+        <p>Time is the most valuable coin in your life.
+        You and you will determine how that coin will be spent.
+        Be careful that you do not let other people spend it for you</p>
+        <p class="left-line5">vikas patel</p>
+
+    </div>
+    <div class="container">
+        <div class="clock">
+            <div class="div-line">
+                <li id="line1" class="line"></li>
+                <li id="line2" class="line"></li>
+                <li id="line3" class="line"></li>
+            </div>
+            <span style="--i:1;"><b>1</b></span>
+            <span style="--i:2;"><b>2</b></span>
+            <span style="--i:3;"><b>3</b></span>
+            <span style="--i:4;"><b>4</b></span>
+            <span style="--i:5;"><b>5</b></span>
+            <span style="--i:6;"><b>6</b></span>
+            <span style="--i:7;"><b>7</b></span>
+            <span style="--i:8;"><b>8</b></span>
+            <span style="--i:9;"><b>9</b></span>
+            <span style="--i:10;"><b>10</b></span>
+            <span style="--i:11;"><b>11</b></span>
+            <span style="--i:12;"><b>12</b></span>
+        </div>
+
+        <div class="digital-clock">
+            <button id="d_clock">
+                <h3 class="h3-digi">Digital Clock</h3>
+                <div id="div-digital">
+                    <span id="hr" style="color: rgb(69, 2, 50);"></span>
+                    <span style="color: rgb(60, 2, 44); font-size: 18px;">:</span>
+                    <span id="min" style="color: rgb(182, 167, 3);"></span>
+                    <span style="color: rgb(182, 167, 3); font-size: 18px;">:</span>
+                    <span id="sec" style="color: rgb(3, 203, 3);"></span>
+                    <span id="int" style="color: white; margin-left: 5px; font-size: 16px;"></span>
+                </div>
+            </button>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
