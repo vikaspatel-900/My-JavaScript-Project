@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Lato", sans-serif;
+
+}
+
+
+body{
+    overflow-x: hidden;
+}
+
+nav{
+    width: 100vw;
+    font-family: "Lato", sans-serif;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20; 
+    padding: 17px 0px; 
+    background-color:darkslategrey;
+}
+
+
+
+.navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 8px 50px;
+    
+}
+
+
+.news-logo a{
+    border: 2px solid red;
+    padding: 4px 6px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 700;
+    color: white;
+}
+
+
+.news-logo a span{
+    color: red;
+}
+
+.nav-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    
+}
+
+
+.nav-link li a{
+    text-transform: capitalize;
+    color: white;
+}
+
+
+.nav-link li a:hover{
+color: lightblue;
+}
+
+
+
+.nav-search input{
+   width: 200px;
+   height:30px ;
+   border-radius: 5px;
+   padding: 3px 5px;
+}
+
+
+.nav-search button{
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+
+
+/*************************************************************hamburger*******************************************************************/
+
+
+
+.hamburger{
+    background-color: black;
+    border-radius: 4px;
+    padding: 4px;
+    display: none;
+}
+
+
+.line{
+    width: 22px;
+    height: 2px;
+    margin: 5px;
+    
+    background-color: white;
+}
+
+
+
+
+.hamburger-nav{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: darkslategray;
+    box-shadow: 3px 1px 8px 1px black;
+    width: 0px;
+    transition: all 0.5s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    opacity: 0;
+}
+
+
+.hamburger-nav .news-logo{
+    margin: 40px 0px;
+}
+
+.hamburger-nav .nav-link{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+
+.hamburger-nav .nav-search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+
+
+.toggle{
+    width: 220px;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+/*************************************************************main*************************************************************************/
+
+
+main{
+  position: relative;
+  top: 120px;
+  
+}
+
+.card-container{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 0px 10px;
+    
+    
+}
+
+
+
+.card{
+    width: 320px;
+    min-height: 400px;
+    background-color: lightblue;
+    border-radius: 4px;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   box-shadow: 0px 0px 4px grey;
+   margin-bottom: 40px;
+   cursor: pointer;
+   padding-bottom: 30px;
+   transition: all 0.4s linear;
+}
+
+
+.card:hover{
+    transform: translateY(-5px);
+    background-color: rgb(107, 176, 199);
+}
+
+.card-img img{
+   width: 360px;
+   height: 200px;
+   object-fit: cover;
+
+
+}
+
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    gap: 10px;
+}
+
+
+
+footer{
+    width: 100vw;
+    padding: 40px;
+    background-color:black;
+    position: relative;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+
+.news-footer{
+    width: 90%;
+    padding: 90px 30px;
+    row-gap: 20px;
+    column-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: darkslategrey;
+   
+    
+}
+
+/*----------------------------------------------------------footer-about------------------------------------------------------------------*/
+
+
+
+.news-about{
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    justify-content: center;
+   
+  
+}
+
+
+.about-icon{
+    display: flex;
+    column-gap: 15px;
+}
+
+
+.about-icon a i{
+    font-size: 22px;
+    
+}
+
+.about-icon a{
+    transition: all 0.5s linear;
+}
+
+.about-icon a:hover{
+    transform: translateY(-4px);
+}
+
+
+/*******************************************footer-contact------------------------------------------------------------------------------*/
+
+
+
+.news-contact{
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+}
+
+
+.con-felx{
+    display: flex;
+    column-gap: 8px;
+}
+
+
+/****************************************************footer-service********************************************************************/
+
+.service{
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+}
+
+.service a:hover{
+    color: lightblue;
+}
+
+
+
+/**************************************************footer-quick link********************************************************************/
+
+
+.quick-link{
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+}
+
+
+
+.quick-link a:Hover{
+    color: lightblue;
+}
+
+
+.news-footer h3{
+    color: white;
+    margin-bottom: 15px;
+}
+
+.news-footer a{
+    color: white;
+    font-size: 14px;
+}
+
+.news-footer p{
+    color: white;
+    font-size: 14px;
+}
+
+
+
+.footer-copyright{
+    width: 100%;
+    margin: 50px 0px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+/*------------------------------------------------------------------media-------------------------------------------------------------------*/
+
+
+
+@media only screen and (max-width:900px){
+    .news-logo a{
+        font-size: 16px;
+    }
+
+    
+.nav-link{
+    font-size: 16px;
+}
+
+
+.nav-search input{
+    width: 130px;
+    height:23px ;
+    
+ }
+
+
+
+ .nav-search button{
+    height: 25px;
+    width: 65px;
+    font-size: 14px;
+   
+}
+ 
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:800px){
+    .hamburger{
+        display: block;
+    }
+
+
+    .nav-link{
+        display: none;
+    }
+
+
+    .nav-search{
+        display: none;
+    }
+
+    .navbar{
+        padding: 8px 30px;
+    }
+
+
+}
+
+
+
+
+
+
